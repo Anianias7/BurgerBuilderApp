@@ -17,6 +17,10 @@ const buildControl = ({
         <button className={classes.More}
                 onClick={added}>More
         </button>
+
+
+
+        
     </div>
 );
 
