@@ -3,14 +3,16 @@ import React from 'react';
 import classes from './Burger.css'
 import BurgerIngredient from "./BurgerIngredient/BurgerIngriedient";
 
-const burger = (props) => {
-    let transformedIngredients = Object.keys(props.ingredients).map(igKey => {
-        return [...Array(props.ingredients[igKey])].map((_, index) =>{
-            return  <BurgerIngredient key={igKey + index} type={igKey}/>
+const burger = ({
+                    ingredients
+                }) => {
+    let transformedIngredients = Object.keys(ingredients).map(igKey => {
+        return [...Array(ingredients[igKey])].map((_, index) => {
+            return <BurgerIngredient key={igKey + index} type={igKey}/>
         });
     }).reduce((ingList, ing) => ingList.concat(ing), []);
 
-    if(transformedIngredients.length === 0) {
+    if (transformedIngredients.length === 0) {
         transformedIngredients = <p>Please start adding ingredients! ;)</p>
     }
 
