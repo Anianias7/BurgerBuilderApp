@@ -6,6 +6,7 @@ import NavigationItems from '../NavigationItems/NavigationItems'
 import Backdrop from '../../UI/Backdrop/Backdrop'
 import Aux from '../../../hoc/Aux'
 
+
 const sideDrawer = ({
                         open,
                         closed

@@ -18,9 +18,6 @@ const buildControl = ({
                 onClick={added}>More
         </button>
 
-
-
-
     </div>
 );
 

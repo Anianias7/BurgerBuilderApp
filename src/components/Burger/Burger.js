@@ -3,6 +3,7 @@ import React from 'react';
 import classes from './Burger.css'
 import BurgerIngredient from "./BurgerIngredient/BurgerIngriedient";
 
+
 const burger = ({
                     ingredients
                 }) => {
@@ -12,7 +13,7 @@ const burger = ({
         });
     }).reduce((ingList, ing) => ingList.concat(ing), []);
 
-    if (transformedIngredients.length === 0) {
+    if(transformedIngredients.length === 0) {
         transformedIngredients = <p>Please start adding ingredients! ;)</p>
     }
 

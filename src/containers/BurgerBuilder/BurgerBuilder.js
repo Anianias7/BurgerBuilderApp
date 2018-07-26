@@ -8,6 +8,7 @@ import OrderSummary from "../../components/Burger/OrderSummary/OrderSummary";
 import MySpinner from '../../components/UI/mySpinner/MySpinner'
 import axios from '../../axios-orders';
 
+
 const INGREDIENTS_PRICES = {
     salad: 0.5,
     cheese: 0.4,
@@ -77,6 +78,7 @@ class BurgerBuilder extends Component {
     };
 
     orderContinueHandler = () => {
+
         this.setState({
             loading: true
         });
@@ -94,6 +96,7 @@ class BurgerBuilder extends Component {
             },
             deliveryMethod: 'fastest'
         };
+
         axios.post('/orders.json', order)
             .then(response => {
                 this.setState({
@@ -109,6 +112,8 @@ class BurgerBuilder extends Component {
             });
     };
 
+
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -117,6 +122,7 @@ class BurgerBuilder extends Component {
         for(let key in disabledInfo){
             disabledInfo[key] = disabledInfo[key] <= 0
         }
+
 
         let orderSummary = <OrderSummary
             ingredients={this.state.ingredients}
