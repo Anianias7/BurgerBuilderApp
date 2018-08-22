@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 import Aux from "../../../hoc/Aux";
 import Button from "../../UI/Button/Button";
@@ -22,8 +22,8 @@ const orderSummary = ({ingredients, purchaseCanceled, purchaseContinued, price})
     </Aux>);
 };
 
-orderSummary.PropTypes = {
-    ingredients: PropTypes.object.isRequired
+orderSummary.propTypes = {
+    ingredients: propTypes.object.isRequired
 };
 
 export default orderSummary;
